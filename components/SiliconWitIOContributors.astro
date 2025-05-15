@@ -1,0 +1,17 @@
+---
+// src/components/SiliconWitIOContributors.astro
+import CachedGitHubContributors from './CachedGitHubContributors.astro';
+---
+<div class="siliconwitio-contributors">
+  <CachedGitHubContributors 
+    owner="SiliconWit" 
+    repo="IO" 
+    maxDisplay={7}
+  />
+</div>
+<style>
+  .siliconwitio-contributors {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+</style>
