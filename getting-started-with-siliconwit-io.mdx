@@ -1,13 +1,21 @@
 ---
 title: 'Getting Started with SiliconWit.IO'
 description: 'A simple introduction to connecting industrial devices with SiliconWitIO'
+contributors: "sam-macharia,jack-kojiro,new-person6"
+pubDate: 2024-01-15
+tags: ["siliconwit-io", "industrial-iot", "device-connectivity", "automation", "tutorial", "getting-started"]
+excerpt: "Learn the fundamentals of connecting and managing industrial devices using SiliconWit.IO platform, including setup procedures, device configuration, and basic data collection for industrial automation applications."
 ---
-import SiliconWitIOComments from './components/SiliconWitIOComments.astro';
-import DiscordWidget from './components/DiscordWidget.astro';
-import SiliconWitIOContributors from './components/SiliconWitIOContributors.astro';
+
+import SiliconWitIOComments from '../../../../components/siliconwit-io/SiliconWitIOComments.astro';
+import TawkWidget from '../../../../components/TawkWidget.astro';
+import UniversalContributors from '../../../../components/UniversalContributors.astro';
 import Copyright from '../../../../components/Copyright.astro';
 
-<SiliconWitIOContributors />
+<UniversalContributors 
+  contributors={frontmatter.contributors}
+  repoName="siliconwit-io"
+/>
 
 
 [SiliconWit.IO](https://siliconwit.io/) helps you connect, monitor, and manage your industrial IoT devices to improve operational efficiency.
@@ -57,6 +65,6 @@ For remote locations or mobile assets without reliable WiFi, GSM connectivity en
 Ready to get started? Visit our documentation site for detailed setup instructions or contact our support team for personalized assistance.
 
 <SiliconWitIOComments />
-<DiscordWidget />
+<TawkWidget />
 <Copyright />
 
