@@ -1,299 +1,85 @@
 ---
 title: SiliconWit IO
-description: Comprehensive IoT integration platform for rapid development, device management, and real-time data analytics
+description: "See, understand, and act on your connected devices in real time: live monitoring, alerts, automation, and AI analytics for IoT and AIoT operations."
+heroImage: "https://img.siliconwit.io/og-image.png"
 ---
 
-import { Card, CardGrid, Badge, Steps } from '@astrojs/starlight/components';
+import { Card, CardGrid, Badge, Steps, LinkButton } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import Copyright from '../../../../components/Copyright.astro';
 import TawkWidget from '../../../../components/TawkWidget.astro';
 
 <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem;">
-<Badge text="IoT Platform" variant="success" />
-<Badge text="Device Management" variant="note" />
-<Badge text="Real-time Analytics" variant="tip" />
-<Badge text="Scalable Architecture" variant="caution" />
+<Badge text="IoT and AIoT" variant="success" />
+<Badge text="MQTT, CoAP, HTTP" variant="note" />
+<Badge text="Automation and AI analytics" variant="tip" />
+<Badge text="MCP integration" variant="caution" />
 </div>
 
-[SiliconWit IO](https://siliconwit.io) is a comprehensive IoT integration platform designed to accelerate the development, deployment, and management of connected device solutions. The platform provides a unified framework for device connectivity, data processing, and system monitoring across diverse IoT applications.
+The data is there; the insight usually is not. Your devices already produce readings, but the value is in acting on them: knowing the state of every asset, hearing the moment one drifts, and having the system respond on its own. [siliconwit.io](https://siliconwit.io) is how SiliconWit helps you do that, from a single sensor to a whole site, a greenhouse, a building's HVAC, a fleet of machines, so you catch problems before they become downtime and stay in control even when you are not there. #IoT #AIoT #ConnectedOperations
 
-## Platform Overview
+<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: '0.75rem' }}>
+  <LinkButton href="https://siliconwit.io" target="_blank" variant="primary" icon="rocket" iconPlacement="start">Start free</LinkButton>
+  <LinkButton href="https://siliconwit.io/try" target="_blank" variant="secondary" icon="external">Try without signup</LinkButton>
+  <LinkButton href="https://siliconwit.io/public-devices" target="_blank" variant="secondary" icon="external">Live devices</LinkButton>
+</div>
+
+## What You Get
 
 <CardGrid>
-  <Card title="Device Integration" icon="rocket">
-    **Multi-Protocol Connectivity**
-    
-    Seamless integration with diverse IoT devices through support for multiple communication protocols including WiFi, Bluetooth, Zigbee, LoRaWAN, and cellular connectivity.
+  <Card title="See everything, live" icon="rocket">
+    Watch the real-time state of every asset on dashboards your whole team can read. Devices connect over **MQTT**, **MQTT-SN**, **CoAP**, or **HTTP**, across WiFi, cellular, NB-IoT, or LoRaWAN networks, with TLS and per-device tokens (endpoints at [mqtt.siliconwit.io](https://mqtt.siliconwit.io)).
   </Card>
-  
-  <Card title="Data Management" icon="setting">
-    **Real-Time Processing**
-    
-    Advanced data ingestion, processing, and storage capabilities with real-time analytics, edge computing support, and scalable cloud infrastructure.
+  <Card title="Know before it breaks" icon="approve-check">
+    Set thresholds and let the platform tell you the moment a reading drifts, by email, SMS, Slack, Discord, or webhook, so a small problem is handled before it becomes downtime.
   </Card>
-  
-  <Card title="System Monitoring" icon="laptop">
-    **Comprehensive Dashboards**
-    
-    Intuitive monitoring interfaces providing real-time system status, performance metrics, device health monitoring, and predictive maintenance capabilities.
+  <Card title="Act on it, remotely" icon="setting">
+    Toggle a relay or change a setting from your phone, and let automation rules respond on their own, with approval workflows where it matters, so you do not have to be on site to keep things running.
   </Card>
-  
-  <Card title="Developer Tools" icon="puzzle">
-    **Rapid Development**
-    
-    Complete development toolkit including APIs, SDKs, simulators, and testing frameworks for accelerated IoT application development.
+  <Card title="Let AI watch with you" icon="puzzle">
+    AI analytics flag anomalies and forecast trends, and MCP integration lets you ask an assistant, in plain language, what your devices are doing, set an alert, or change a rule. An optional [public view](https://siliconwit.io/public-devices) lets a customer or funder watch your real data too.
   </Card>
 </CardGrid>
 
-## Key Features
+## Build Devices That Keep Mattering
 
-<Tabs>
-  <TabItem label="Connectivity">
-    ### Device Integration Capabilities
-    
-    **Multi-Protocol Support**:
-    - WiFi and Ethernet connectivity for high-bandwidth applications
-    - Bluetooth and BLE for short-range sensor networks
-    - Zigbee and Z-Wave for mesh networking scenarios
-    - LoRaWAN and cellular for wide-area connectivity
-    
-    **Device Management**:
-    - Automatic device discovery and provisioning
-    - Firmware over-the-air (FOTA) updates
-    - Device configuration and parameter management
-    - Health monitoring and diagnostics
-    
-    **Security Framework**:
-    - End-to-end encryption and secure communication
-    - Device authentication and authorization
-    - Certificate management and PKI infrastructure
-    - Compliance with industry security standards
-  </TabItem>
-  
-  <TabItem label="Data Platform">
-    ### Data Processing and Analytics
-    
-    **Real-Time Processing**:
-    - Stream processing for time-critical applications
-    - Edge computing capabilities for reduced latency
-    - Data filtering and preprocessing at the edge
-    - Adaptive sampling and compression algorithms
-    
-    **Storage and Analytics**:
-    - Time-series database optimization for IoT data
-    - Historical data analysis and trend identification
-    - Machine learning integration for predictive analytics
-    - Custom analytics pipeline development
-    
-    **Visualization and Reporting**:
-    - Real-time dashboards and monitoring displays
-    - Custom report generation and scheduling
-    - Alert and notification management
-    - Business intelligence integration
-  </TabItem>
-  
-  <TabItem label="Development">
-    ### Developer Experience
-    
-    **Development Framework**:
-    - RESTful APIs for system integration
-    - WebSocket support for real-time applications
-    - GraphQL interfaces for flexible data queries
-    - SDK support for multiple programming languages
-    
-    **Testing and Simulation**:
-    - Device simulation and virtual testing environments
-    - Load testing and performance validation tools
-    - Integration testing frameworks
-    - Deployment automation and CI/CD pipelines
-    
-    **Documentation and Support**:
-    - Comprehensive API documentation
-    - Code examples and implementation guides
-    - Community support and knowledge base
-    - Professional services and consulting
-  </TabItem>
-</Tabs>
+It is easy to build a device, deploy it, and lose track of it. A year on, no one is quite sure whether it still works or whether it ever earned its keep. Monitoring changes that. When a device reports to siliconwit.io from the start, it stops being a black box: you can watch it do its job, improve it on evidence rather than guesswork, and learn early whether it was a sound investment or one to retire. A device you can see is one you can keep making better; a device you cannot see is one you will eventually forget.
 
-## Architecture and Scalability
+## Try It in Five Minutes
 
-### System Architecture
+You do not need hardware, or even an account, to start.
 
 <Steps>
 
-1. **Device Layer**
-   
-   Physical IoT devices, sensors, and actuators connected through various communication protocols and edge gateways.
+1. **Try it without signing up** at [siliconwit.io/try](https://siliconwit.io/try), where you can see live data and the dashboards before creating an account.
 
-2. **Connectivity Layer**
-   
-   Protocol adapters, device managers, and secure communication channels handling device-to-cloud connectivity and data transmission.
+2. **Check the protocols** at [mqtt.siliconwit.io](https://mqtt.siliconwit.io), the protocols home page that lists the MQTT, MQTT-SN, CoAP, and HTTP endpoints and how to connect to each.
 
-3. **Data Processing Layer**
-   
-   Real-time stream processing, data transformation, edge computing nodes, and distributed data storage systems.
+3. **Flash a real board** using a pre-built firmware image for common boards (ESP32, Raspberry Pi), with credentials embedded so you are not editing C on day one.
 
-4. **Application Layer**
-   
-   Business logic, analytics engines, machine learning models, and custom application development frameworks.
-
-5. **Interface Layer**
-   
-   User interfaces, dashboards, APIs, and integration points for external systems and third-party applications.
+4. **Watch it appear** on your dashboard, set a rule, and, if you like, opt the device into the public dashboard as a live showcase.
 
 </Steps>
 
-### Scalability Features
+## Security and Access
 
-<CardGrid>
-  <Card title="Horizontal Scaling" icon="document">
-    **Distributed Architecture**
-    
-    - Microservices-based design for independent scaling
-    - Load balancing and auto-scaling capabilities
-    - Distributed data storage and processing
-    - Geographic distribution for global deployments
-  </Card>
-  
-  <Card title="Performance Optimization" icon="laptop">
-    **High-Performance Processing**
-    
-    - In-memory data processing for low latency
-    - Caching strategies for frequently accessed data
-    - Optimized data serialization and compression
-    - Parallel processing and multi-threading support
-  </Card>
-  
-  <Card title="Resource Management" icon="chart">
-    **Efficient Resource Utilization**
-    
-    - Dynamic resource allocation and management
-    - Container-based deployment and orchestration
-    - Monitoring and alerting for resource usage
-    - Cost optimization through intelligent scaling
-  </Card>
-  
-  <Card title="Reliability Features" icon="star">
-    **High Availability Design**
-    
-    - Redundancy and failover mechanisms
-    - Data replication and backup strategies
-    - Health monitoring and automatic recovery
-    - Disaster recovery and business continuity
-  </Card>
-</CardGrid>
+- TLS encryption on every protocol, with per-device tokens.
+- Account protection with 2FA and passkeys.
+- You control which of your devices, if any, are public.
 
-## Implementation Guide
+## Hardware and Documentation
 
-### Getting Started Process
+The [hardware store](https://store.siliconwit.io) ships pre-tested dev boards and starter kits (the fastest way to a working device), and the full platform [documentation](https://docs.siliconwit.io) covers recipes, SDKs, and protocol references.
 
-**Planning and Requirements**:
-- Define IoT application requirements and objectives
-- Identify device types and communication protocols
-- Plan data flow and processing requirements
-- Establish security and compliance requirements
+## Pricing
 
-**System Setup and Configuration**:
-- Platform deployment and initial configuration
-- Network setup and connectivity establishment
-- Security configuration and certificate management
-- User access and permission management
+Plans scale with the number of devices you run: a **Free** tier to start, then **Starter**, **Business**, **Scale**, and **Enterprise**, with the higher tiers adding more devices, the AI tier, and read/write MCP access. You pay for the devices you actually run, and you can begin at no cost. See [siliconwit.io](https://siliconwit.io) for current pricing.
 
-**Device Integration and Testing**:
-- Device registration and provisioning
-- Communication protocol configuration
-- Data flow testing and validation
-- Performance testing and optimization
+## Works With the Courses
 
-**Deployment and Monitoring**:
-- Production deployment and go-live procedures
-- Monitoring setup and alert configuration
-- User training and documentation
-- Ongoing maintenance and support procedures
+siliconwit.io works hand in hand with our [free engineering courses](/education/). The IoT and embedded tracks let you deploy their projects here, and learners are encouraged to put a personal project online once they have built it. The course teaches the engineering; the platform is where the working device lives.
 
-[Get Started with SiliconWit IO →](./getting-started-with-siliconwit-io)
-
-## Use Cases and Applications
-
-### Industrial IoT
-- Manufacturing equipment monitoring and predictive maintenance
-- Supply chain tracking and logistics optimization
-- Quality control and process automation
-- Energy management and efficiency optimization
-
-### Smart Buildings
-- HVAC system monitoring and control
-- Lighting management and energy optimization
-- Security system integration and access control
-- Space utilization and occupancy analytics
-
-### Environmental Monitoring
-- Air quality monitoring and pollution tracking
-- Weather station networks and climate monitoring
-- Water quality assessment and management
-- Agricultural monitoring and precision farming
-
-### Healthcare IoT
-- Patient monitoring and remote health tracking
-- Medical device integration and data collection
-- Hospital asset tracking and management
-- Telemedicine and remote diagnostics
-
-## Integration Capabilities
-
-### Enterprise Systems
-- ERP and CRM system integration
-- Business intelligence and reporting platforms
-- Workflow automation and process management
-- Legacy system connectivity and data migration
-
-### Cloud Platforms
-- Multi-cloud deployment and management
-- Hybrid cloud architectures and data synchronization
-- Cloud-native services and serverless computing
-- API gateway and service mesh integration
-
-### Third-Party Services
-- Machine learning and AI platform integration
-- External data sources and feed integration
-- Notification and messaging service connectivity
-- Payment processing and e-commerce integration
-
-## Security and Compliance
-
-### Security Framework
-- Zero-trust security architecture
-- Multi-factor authentication and access control
-- Data encryption at rest and in transit
-- Regular security audits and vulnerability assessments
-
-### Compliance Standards
-- GDPR and data privacy regulation compliance
-- Industry-specific compliance (HIPAA, SOX, etc.)
-- Security certifications (ISO 27001, SOC 2)
-- Device certification and regulatory approval
-
-## Support and Services
-
-### Professional Services
-- System design and architecture consulting
-- Custom development and integration services
-- Performance optimization and tuning
-- Training and certification programs
-
-### Technical Support
-- 24/7 technical support and monitoring
-- Proactive system health monitoring
-- Regular maintenance and updates
-- Emergency response and incident management
-
-### Community Resources
-- Developer community and forums
-- Open-source contributions and collaboration
-- Technical documentation and knowledge base
-- Regular webinars and training sessions
-
-The SiliconWit IO platform provides a comprehensive foundation for building scalable, secure, and efficient IoT solutions that address the complex requirements of modern connected device applications across diverse industries and use cases.
+<LinkButton href="./getting-started-with-siliconwit-io/" variant="primary">Get started with siliconwit.io</LinkButton>
 
 <Copyright />
 <TawkWidget />
