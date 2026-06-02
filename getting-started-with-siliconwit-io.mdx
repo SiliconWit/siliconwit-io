@@ -1,7 +1,7 @@
 ---
 title: 'Getting Started with SiliconWit.io'
 description: 'Connect your first device to siliconwit.io and go from a live reading to an alert and an automation in a few steps.'
-contributors: "sam-macharia,jack-kojiro"
+contributors: "sam-macharia,joseph-muguro,jack-kojiro"
 pubDate: 2025-08-27
 tags: ["siliconwit-io", "iot", "getting-started", "mqtt", "automation", "tutorial"]
 excerpt: "From trying the platform with no signup to a live device, a first alert, and an automation rule: the practical path to getting your operation onto siliconwit.io."
@@ -24,7 +24,7 @@ import { Card, CardGrid, Badge, Steps, LinkButton, FileTree } from '@astrojs/sta
 
 
 
-The goal of this guide is simple: get one of your devices onto [siliconwit.io](https://siliconwit.io), see its data live, and then make the platform do something useful with it, send you an alert and act on its own. You can do the whole thing with a single sensor, and you do not need to commit anything to begin. #IoT #GettingStarted #DeviceMonitoring
+By the end of this guide, one of your devices will be live on [siliconwit.io](https://siliconwit.io), reporting in real time and alerting you the moment a reading drifts. Add an automation rule and it can act on its own whenever it has something to control. You can start with a single sensor, and without committing anything. #IoT #GettingStarted #DeviceMonitoring
 
 ## See It Work First
 
@@ -48,13 +48,9 @@ Before you sign up, you can watch the platform run on real data.
 
 2. **Add a device and get its token.** From the dashboard, add a device. The platform issues a unique, per-device token so each device authenticates on its own. You choose how it will connect on the next step.
 
-3. **Connect it.** Two common paths:
-   - **Use a pre-built firmware image** for a common board (ESP32, Raspberry Pi). The credentials are embedded, so you flash and go without editing code on day one.
-   - **Use any standard client.** Point an existing MQTT, MQTT-SN, CoAP, or HTTP client at the endpoints listed on [mqtt.siliconwit.io](https://mqtt.siliconwit.io). The connection is TLS-encrypted and uses your device token.
+3. **Connect it.** Point a standard MQTT, MQTT-SN, CoAP, or HTTP client at the endpoints listed on [mqtt.siliconwit.io](https://mqtt.siliconwit.io), authenticating with your device token over a TLS connection. The [documentation](https://docs.siliconwit.io) has setup examples for common boards such as the ESP32 and Raspberry Pi, and it works the same across WiFi, cellular, NB-IoT, and LoRaWAN networks.
 
-   It works the same across WiFi, cellular, NB-IoT, and LoRaWAN networks.
-
-4. **See it live.** Your device appears on the dashboard with its readings updating in real time. Add a chart for the values you care about; this is the "see everything, live" view your whole team can read.
+4. **See it live.** Your device appears on the dashboard with its readings updating in real time. Add a chart for the values you care about, and you have the live view at a glance.
 
 </Steps>
 
@@ -82,10 +78,10 @@ A live reading is useful; a reading that warns you and acts on its own is the po
 
 <CardGrid>
   <Card title="Hardware to start fast" icon="rocket">
-    Pre-tested dev boards and starter kits at [store.siliconwit.io](https://store.siliconwit.io) are the quickest way to a working device.
+    Dev boards and hardware at [store.siliconwit.io](https://store.siliconwit.io) can get you to a working device faster.
   </Card>
   <Card title="Full documentation" icon="open-book">
-    Recipes, SDKs, and protocol references live at [docs.siliconwit.io](https://docs.siliconwit.io), including copy-paste examples for common boards.
+    Protocol references and setup guides, with examples for common boards, live at [docs.siliconwit.io](https://docs.siliconwit.io).
   </Card>
   <Card title="Show your operation" icon="approve-check">
     Opt any device into the [public devices](https://siliconwit.io/public-devices) view to give a customer or funder a live window into your work.
