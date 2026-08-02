@@ -24,23 +24,49 @@ import { Card, CardGrid, Badge, Steps, LinkButton, FileTree } from '@astrojs/sta
 
 
 
-By the end of this guide, one of your devices will be live on [siliconwit.io](https://siliconwit.io), reporting in real time and alerting you the moment a reading drifts. Add an automation rule and it can act on its own whenever it has something to control. You can start with a single sensor, and without committing anything. #IoT #GettingStarted #DeviceMonitoring
+By the end of this guide, one of your devices will be live on [siliconwit.io](https://siliconwit.io), reporting in real time and alerting you the moment a reading drifts. Add an automation rule and it can act on its own whenever it has something to control. You can start with a single sensor, or with no hardware at all. #IoT #GettingStarted #DeviceMonitoring
 
-## See It Work First
+## Three ways to add your first device
 
-Before you sign up, you can watch the platform run on real data.
+There is no single starting point. Pick the one that matches what is on your desk right now.
+
+### Try it now, with no hardware at all
+
+[siliconwit.io/try](https://siliconwit.io/try) creates a real device and streams real readings into it in seconds, with no account, no credit card, and nothing plugged in. Send data from the page itself, or with a single curl command if you would rather work from a terminal, and watch the live feed move. The demo device lasts about 30 minutes; create a free account and you keep it.
+
+If you want to see the platform carrying someone else's load first, the [public devices](https://siliconwit.io/public-devices) page shows always-on devices reporting in real time.
 
 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '1rem 0' }}>
   <LinkButton href="https://siliconwit.io/try" target="_blank" variant="primary" icon="rocket" iconPlacement="start">Try without signup</LinkButton>
   <LinkButton href="https://siliconwit.io/public-devices" target="_blank" variant="secondary" icon="external">See live devices</LinkButton>
 </div>
 
-[siliconwit.io/try](https://siliconwit.io/try) lets you explore live data and dashboards with no account, and the [public devices](https://siliconwit.io/public-devices) page shows always-on devices streaming in real time. When you are ready, a [free account](https://siliconwit.io) takes a minute.
+### I have hardware
 
-## From Zero to a Live Device
+An ESP32 on the bench is the fastest route. Sign in, choose "Flash an ESP32 (browser, no IDE)", plug the board into USB, and pick it from the browser port picker. The firmware is written from the browser, so there is no IDE and nothing to install, and the device is created and claimed into your account automatically, with no device IDs or access tokens copied by hand. You name the board and type your WiFi credentials, which go straight to the device over USB rather than through our servers. Browser flashing needs Chrome, Edge, or Opera on desktop or Android.
+
+Anything else you already run works too: define the device yourself and point a standard MQTT, MQTT-SN, CoAP, or HTTP client at it, as described in the section below. Where the board came from makes no difference, ours or anyone else's.
+
+<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '1rem 0' }}>
+  <LinkButton href="https://docs.siliconwit.io/devices/esp32-setup/" target="_blank" variant="primary" icon="open-book" iconPlacement="start">ESP32 setup guide</LinkButton>
+  <LinkButton href="https://store.siliconwit.io" target="_blank" variant="secondary" icon="external">Get a board</LinkButton>
+</div>
+
+### I bought a SiliconWit device
+
+It arrives already working. Enter the claim code printed on the label at [siliconwit.io/claim](https://siliconwit.io/claim) and the device appears in your account and starts reporting. No wiring, no firmware, no integration work.
+
+<div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', margin: '1rem 0' }}>
+  <LinkButton href="https://store.siliconwit.io" target="_blank" variant="primary" icon="rocket" iconPlacement="start">See what we build</LinkButton>
+  <LinkButton href="https://siliconwit.io/claim" target="_blank" variant="secondary" icon="approve-check">Claim a device</LinkButton>
+</div>
+
+## Bringing your own board
 
 <InArticleAd />
 
+
+The browser flasher and the claim code both do this work for you. Do it by hand when you are running your own firmware, a Raspberry Pi, a gateway, or anything that already speaks a standard protocol.
 
 <Steps>
 
@@ -54,7 +80,7 @@ Before you sign up, you can watch the platform run on real data.
 
 </Steps>
 
-## Make the Data Work for You
+## Make the data work for you
 
 <InArticleAd />
 
@@ -71,7 +97,7 @@ A live reading is useful; a reading that warns you and acts on its own is the po
 
 </Steps>
 
-## Going Further
+## Going further
 
 <InArticleAd />
 
